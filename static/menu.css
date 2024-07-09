@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6e6;
+    color: #333;
+}
+
+h1 {
+    background-color: #800080;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.section-title {
+    margin-top: 20px;
+}
+
+#link {
+    position: absolute;
+    top: 10px; /* 调整此值以控制顶部的距离 */
+    right: 10px; /* 调整此值以控制右边的距离 */
+    list-style: none; /* 去掉列表的默认样式 */
+}
+
+#link a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #000; /* 设置链接的颜色 */
+    font-weight: bold; /* 设置链接的字体加粗 */
+}
+

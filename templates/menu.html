@@ -8,26 +8,24 @@
     <link rel="stylesheet" href="{% static 'menu.css' %}">
 </head>
 <body>
-    <li id="link" style="position: absolute; top: 10px; right: 10px; list-style: none;">
-        <a href="{% url 'home' %}" style="text-decoration: none; color: #007bff;; font-weight: bold;">Home</a>
-    </li>
-        <h1>restaurants</h1>
-        {% for r in restaurant_list %}
-        <ul>
-            <li>restaurant name : {{ r.name }}</li>
-            <li>restaurant phone number : {{ r.phone_number }}</li>
-            <li>restaurant address : {{ r.address }}</li>
-        </ul>        
-        {% endfor %}
+    <li id="link"><a href="{% url 'home' %}">Home</a></li>
+    <h1>restaurants</h1>
+    {% for r in restaurant_list %}
+    <ul>
+        <li>restaurant name : {{ r.name }}</li>
+        <li>restaurant phone number : {{ r.phone_number }}</li>
+        <li>restaurant address : {{ r.address }}</li>
+    </ul>        
+    {% endfor %}
 
-        <h1 class="section-title">foods</h1>
-        {% for f in food_list %}
-        <ul>
-            <li>food name : {{ f.name }}</li>
-            <li>food price : {{ f.price }}</li>
-            <li>food spicy : {{ f.is_spicy }}</li>
-            <li>food restaurant : {{ f.food_restaurant }}</li>
-        </ul>
+    <h1 class="section-title">foods</h1>
+    {% for f in food_list %}
+    <ul>
+        <li>food name : {{ f.name }}</li>
+        <li>food price : {{ f.price }}</li>
+        <li>food spicy : {{ f.is_spicy }}</li>
+        <li>food restaurant : {{ f.food_restaurant }}</li>
+    </ul>
         {% endfor %}
     </div>
 </body>

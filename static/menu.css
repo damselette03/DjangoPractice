@@ -49,7 +49,7 @@ li:not(:last-child) {
 
 #link a {
     text-decoration: none; /* 去掉链接的下划线 */
-    color: #000; /* 设置链接的颜色 */
+    color: #007bff; /* 设置链接的颜色 */
     font-weight: bold; /* 设置链接的字体加粗 */
 }
 

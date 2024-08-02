@@ -6,7 +6,7 @@ class Restaurant(models.Model):
     address = models.CharField(max_length=50, blank=True)  #餐廳地址
     
     def __str__(self): #新增
-        return self.name
+        return f'{self.name} 地址：{self.address}, 電話：{self.phone_number}'
 
 class Food(models.Model):
     name = models.CharField(max_length=20) #食物名稱

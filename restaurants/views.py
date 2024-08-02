@@ -13,6 +13,9 @@ def menu(request): #新增
 def home(request):
     return render(request , 'home.html',locals())
 
+def search(request):
+    return render(request , 'search.html',locals())
+
 def custom_login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)

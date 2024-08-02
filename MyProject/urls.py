@@ -20,7 +20,7 @@ from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 
 # from schema import *
-from restaurants.views import menu , home
+from restaurants.views import menu , home , search
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
     path('' , home , name='home'),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path('accounts/', include('restaurants.urls')),  # 包含应用程式的urls
+    path('search/', search , name='search'),
 ]

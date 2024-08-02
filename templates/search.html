@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>餐廳搜尋</h1>
+        <div class="search-section">
+            <input id="RestaurantInput" type="text" placeholder="輸入餐廳名稱">
+            <button id="RestaurantSearcher">搜尋</button>
+        </div>
+        <ul id="RestaurantInfo"></ul>
+    </div>
+    {% load static %}
+    <script src="{% static 'search.js' %}"></script>
+</body>
+</html>

@@ -20,6 +20,7 @@ class Query(graphene.ObjectType):
     all_restaurants = graphene.List(RestaurantType)
     all_foods = graphene.List(FoodType)
     food_by_restaurant = graphene.List(FoodType, restaurant_id=graphene.Int())
+    foods_by_restaurant_name = graphene.List(FoodType, restaurant_name=graphene.String(required=True))
 
     def resolve_all_restaurants(self, info):
         return Restaurant.objects.all()
@@ -29,6 +30,12 @@ class Query(graphene.ObjectType):
 
     def resolve_food_by_restaurant(self, info, restaurant_id):
         return Food.objects.filter(food_restaurant_id=restaurant_id)
+
+    def resolve_foods_by_restaurant_name(self, info, restaurant_name):
+        restaurant = Restaurant.objects.filter(name=restaurant_name).first()
+        if restaurant:
+            return Food.objects.filter(food_restaurant_id=restaurant.id)
+        return []
 
 
 schema = graphene.Schema(query=Query)

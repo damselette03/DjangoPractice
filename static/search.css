@@ -1,0 +1,72 @@
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 标题样式 */
+h1 {
+    text-align: center;
+    color: #6f42c1; /* 紫色 */
+}
+
+/* 搜索区样式 */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #d1c4e9;
+    border-radius: 4px;
+    width: 300px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6f42c1; /* 紫色 */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a2a9d; /* 深紫色 */
+}
+
+/* 食物信息样式 */
+#RestaurantInfo {
+    list-style: none;
+    padding: 0;
+}
+
+#RestaurantInfo div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e9d8fd;
+    border-radius: 4px;
+    background-color: #f5f3f9;
+}
+
+#RestaurantInfo p {
+    margin: 5px 0;
+    color: #6f42c1; /* 紫色 */
+}
+
